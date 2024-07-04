@@ -1,0 +1,14 @@
+.place {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 40px;
+}
+.button {
+  background: rgb(190, 190, 243);
+  transform: cubic-bezier(0.075, 0.82, 0.165, 1);
+  &&:hover {
+    background: blue;
+    color: white;
+  }
+}

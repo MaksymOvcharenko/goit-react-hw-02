@@ -1,6 +1,6 @@
 import s from "./Options.module.css";
 // import handleClick from "../App";
-const Options = ({ updateFeedback, deleteFeedback }) => {
+const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
   return (
     <div className={s.place}>
       <button className={s.button} onClick={() => updateFeedback("good")}>
@@ -12,9 +12,11 @@ const Options = ({ updateFeedback, deleteFeedback }) => {
       <button className={s.button} onClick={() => updateFeedback("bad")}>
         Bad
       </button>
-      <button className={s.button} onClick={() => deleteFeedback()}>
-        Delete
-      </button>
+      {totalFeedback > 0 && (
+        <button className={s.button} onClick={() => resetFeedback()}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };

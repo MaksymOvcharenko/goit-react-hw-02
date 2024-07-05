@@ -27,7 +27,7 @@ function App() {
     }));
     console.log(feedback);
   };
-  const deleteFeedback = () => {
+  const resetFeedback = () => {
     setFeedback(() => {
       return {
         good: 0,
@@ -44,11 +44,10 @@ function App() {
       <Description />
       <Options
         updateFeedback={updateFeedback}
-        deleteFeedback={deleteFeedback}
+        resetFeedback={resetFeedback}
+        totalFeedback={totalFeedback}
       />
-      {/* <Notification>
-        <p>No</p>
-      </Notification> */}
+
       {totalFeedback ? (
         <Feedback
           good={feedback.good}
